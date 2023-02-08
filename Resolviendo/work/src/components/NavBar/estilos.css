@@ -1,0 +1,28 @@
+header{
+    max-width: 90%;
+    margin: auto;
+    padding: 30px 0px;
+}
+
+
+.contenedorNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+h2{
+    color: lightblue;
+}
+
+ul{
+    display: flex;
+    color: white;
+    
+}
+
+
+ul li{
+    margin-right: 2em;
+}
+
