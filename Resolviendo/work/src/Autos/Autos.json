@@ -1,0 +1,16 @@
+[
+    {
+        "Modelo":"Toyota Supra Mk4",
+        "Precio": 60000,
+        "Img":"https://img.remediosdigitales.com/4eee67/toyota_supra_targa_24/1366_2000.jpg",
+        "Descripcion": "El Supra MkIV estrenó un diseño compuesto por curvas, en plena era del biodesign, y caracterizado por un imponente alerón trasero. El coche era más pequeño, más bajo y más ancho que el MkIII. Su motor de 6 cilindros en línea desarrollaba 220 CV, mientras que la variante biturbo entregaba 330 CV.",
+        "id":1
+    },
+    {
+        "Modelo":"Dodge Charger 1970",
+        "Precio":80000,
+        "Img":"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/145908815-3058590201037263-1724258676834174697-o-1612459429.jpg",
+        "Descripcion":"Este Dodge Charger 1970 Tantrum es su creación más brutal hoy en día y entre muchas otras increíbles características, incluye bajo el cofre, un motor V8 de 9 litros de desplazamiento y doble turbocargador de 1,650 hp, el cual fue desarrollado por Mercury Marine y tiene su principal aplicación en los botes de carreras",
+        "id":2
+    }
+]

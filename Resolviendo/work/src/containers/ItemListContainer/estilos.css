@@ -1,0 +1,57 @@
+.contenedor{
+    margin: 0;
+    padding: 0;
+    max-width: 90%;
+}
+
+.contenedorAutos{
+    background:linear-gradient(rgba(0,0,0, 0.50) 0%, rgba(0,0,0, 0.50) 100%), url("https://wallpaperaccess.com/full/867516.jpg");
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #FFF;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+
+
+.contenedorAutos .contenedor {
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+.contenedorAutos .contenedor .tituloAutoPrinc{
+    font-weight: 100;
+    flex-direction: row;
+    font-size: 3.75em;
+}
+
+.contenedorAutos .contenedor .DescripcionPrinc{
+    max-width: 50%;
+    font-size: 1em;
+    margin: 0 auto;
+    line-height: 1.75em;
+    margin-left: 5.2em;
+    margin-top: 1em;
+}
+
+.contenedorAutos .botonPric{
+    border: none;
+    margin: 0;
+    max-width: 90%;
+    margin: auto;
+    margin-bottom: 7em;
+    padding: 1.25em 2em;
+    background:rgba(110, 110, 110, 0.52);
+    color: #FFF;
+    border-radius: 5px 5px 5px 5px;
+    margin-top: 2em;
+    font-size: 1em;
+}
+
+
+.contenedorAutos .botonPric:hover{
+    background: #FFF;
+    color: #000;
+}

@@ -1,5 +1,4 @@
 import './App.css';
-
 import Nav from "./components/NavBar"
 import ItemListContainer from './containers/ItemListContainer';
 
@@ -11,7 +10,7 @@ function App() {
       <body>
         <Nav></Nav>
         <ItemListContainer></ItemListContainer>
-      </body>
+        </body>
     </div>
     
   );
