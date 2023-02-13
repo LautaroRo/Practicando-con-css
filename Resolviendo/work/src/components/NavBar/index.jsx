@@ -1,5 +1,5 @@
-
 import React from 'react'
+import { Link } from 'react-router-dom'
 import "./estilos.css"
 const NavBar = () => {
 return (
@@ -9,8 +9,8 @@ return (
                 <h2>Tienda</h2>
                 <nav>
                     <ul>
-                    <li>Inicio</li>
-                    <li>Ofertas</li>
+                    <li><Link className='LinkNav' to="/">Inicio</Link></li>
+                    <li><Link className='LinkNav' to='/Ofertas'>Ofertas</Link></li>
                     <li>Biblioteca</li>
                     </ul>
                 </nav>

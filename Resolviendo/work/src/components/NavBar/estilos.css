@@ -24,5 +24,10 @@ ul{
 
 ul li{
     margin-right: 2em;
+    cursor: pointer;
 }
 
+.LinkNav{
+    text-decoration: none;
+    color: #fff;
+}

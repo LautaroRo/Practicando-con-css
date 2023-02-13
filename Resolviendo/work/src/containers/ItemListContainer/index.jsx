@@ -38,7 +38,8 @@ return (
                 <h1>Loading</h1>
             </div>
             : <Main greeting={products}></Main>     
-            }
+        
+        }
     </div>
 )
 }

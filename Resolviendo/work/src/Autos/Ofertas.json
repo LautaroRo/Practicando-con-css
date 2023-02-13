@@ -1,0 +1,10 @@
+[
+    {
+        "Modelo":"Honda Civic",
+        "Precio1": 90000,
+        "Precio2":40000,
+        "Img":"https://rare-gallery.com/uploads/posts/537261-honda-civic.jpg",
+        "Descripcion": "El Supra MkIV estrenó un diseño compuesto por curvas, en plena era del biodesign, y caracterizado por un imponente alerón trasero. El coche era más pequeño, más bajo y más ancho que el MkIII. Su motor de 6 cilindros en línea desarrollaba 220 CV, mientras que la variante biturbo entregaba 330 CV.",
+        "id":1
+    }
+]
