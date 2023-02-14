@@ -62,4 +62,8 @@
     .contenedorNav{
         flex-direction: column;
     }
+
+    nav ul li{
+        margin-top: 5%;
+    }
 }

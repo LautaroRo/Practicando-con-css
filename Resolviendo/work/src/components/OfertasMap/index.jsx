@@ -2,11 +2,36 @@ import React from 'react'
 import "./estilos.css"
 const OfertasMap = ({ofertas}) => {
     return (
-        <div>
-            <img src={ofertas.Img}></img>
-            <strike>{ofertas.Precio1}</strike>
-            <p>{ofertas.Precio2}</p>
+    <div>
+        <div className='grid'>
+
+            
+            <div>
+                <img className='fotoGrid' src={ofertas.Img} alt={ofertas.id}/>
+            </div>
+            
+            <div className='ModeloDescripcion'>
+                <h2 className='tituloOferta'>{ofertas.Modelo}</h2>
+                <p className='descripcionOfertas'>{ofertas.Descripcion}</p>
+
+                <div className='PreciosYboton'>
+                    <div className='Precios'>
+                        <strike>{ofertas.Precio1}$</strike>
+                        <p className='PrecioDeOferta'>{ofertas.Precio2}$</p>
+                    </div>
+                    <div className='DivBotonOfertas'>
+                        <button className='botonOfertas'>comprar</button>
+                    </div>
+                    
+                </div>
+            </div>
+            
+
+
+
         </div>
+            
+    </div>
     )
 }
 

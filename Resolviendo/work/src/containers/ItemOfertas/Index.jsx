@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ofertas from "../../Autos/Ofertas.json"
 import Ofertas from "../../components/Ofertas"
+import "./estilos.css"
 const ItemOfertas = () => {
 
     const [products, setProducts] = useState([])
@@ -21,7 +22,7 @@ const ItemOfertas = () => {
     console.log(products)
 
     return (
-        <div>
+        <div className='bodyOfertas'>
 
             {
             Object.keys(products).length === 0
