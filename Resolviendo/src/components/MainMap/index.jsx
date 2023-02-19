@@ -2,6 +2,7 @@ import React from 'react'
 import "./estilos.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faMoneyBillAlt} from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom'
 
 
 const MainMap = ({Autos}) => {
@@ -16,11 +17,11 @@ return (
                 </div>
             <div className='divSteam'>
             <div className='VersionSteam'>
-                <h2 className='TituloIndexAutos'>{Autos.Modelo}</h2>
+                <h2 className='TituloAutos'>{Autos.Modelo}</h2>
                 <p className='DescripcionIndex'>{Autos.Descripcion}</p>
                 <div className='PrecioYboton'>
                     <h4 className='PrecioIndex'>{Autos.Precio} USD$</h4>
-                    <button className='boton'> <FontAwesomeIcon icon={faMoneyBillAlt}></FontAwesomeIcon>Comprar</button>
+                    <Link className="LinkMap" to={`/detail/${Autos.id}`}><FontAwesomeIcon icon={faMoneyBillAlt}/>Comprar</Link>
                 </div>
             </div>
             

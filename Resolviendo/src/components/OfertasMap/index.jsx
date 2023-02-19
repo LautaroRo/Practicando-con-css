@@ -1,9 +1,14 @@
 import React from 'react'
+
 import "./estilos.css"
 const OfertasMap = ({ofertas}) => {
+
     return (
     <div>
-        <div className='grid'>
+        <div className='IniciOfertas'>
+        <a className='LinkVer' href='#Ofertas'>Ver Ofertas</a>
+        </div>
+        <div id="Ofertas" className='grid'>
 
             
             <div>
@@ -20,6 +25,7 @@ const OfertasMap = ({ofertas}) => {
                         <p className='PrecioDeOferta'>{ofertas.Precio2}$</p>
                     </div>
                     <div className='DivBotonOfertas'>
+                        <button className='botonOfertas2'>Info</button>
                         <button className='botonOfertas'>comprar</button>
                     </div>
                     

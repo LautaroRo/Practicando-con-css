@@ -4,6 +4,7 @@ import Main from "../../components/Main"
 import "./estilos.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCarRear} from '@fortawesome/free-solid-svg-icons'
+import {faWhatsapp} from '@fortawesome/free-brands-svg-icons'
 const ItemListContainer = () => {
 
     const [products, setProducts] = useState([])
@@ -31,6 +32,10 @@ return (
                 <button className='botonPric'><FontAwesomeIcon icon={faCarRear}></FontAwesomeIcon> Comprar</button>
             </div>
         </div>
+        <div className='posicionBoton'>
+            <button className='botonwsp'><FontAwesomeIcon className='iconowsp'icon={faWhatsapp}/></button>
+        </div>
+
         {
             Object.keys(products).length === 0
             ?

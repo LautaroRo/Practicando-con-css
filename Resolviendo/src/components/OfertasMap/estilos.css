@@ -1,3 +1,35 @@
+.IniciOfertas{
+    background:linear-gradient(rgba(0,0,0, 0.50) 0%, rgba(0,0,0, 0.50) 100%), url("https://s1.1zoom.me/b5050/575/BMW_Tuning_4-Series_Black_Metallic_576020_1920x1080.jpg");
+    font-size: 16px;
+    height: 100vh;
+    color: #FFF;
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.LinkVer{
+    padding: 1.5% 10%;
+    border-radius: 1em;
+    background: rgba(110, 110, 110, 0.92);
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    transition: all 1s;
+}
+
+.LinkVer:hover{
+    color: black;
+    background: #FFF;
+}
+
+
+
 .grid{
     display: grid;
     grid-template-columns: 40% 60%;
@@ -35,7 +67,7 @@
 
 .PreciosYboton{
     display: grid;
-    grid-template-columns: 30% 30%;
+    grid-template-columns: 40% 50%;
     width: 90%;
     margin: auto;
     align-items: center;
@@ -67,17 +99,27 @@
     display: flex;
     text-align: center;
     width: 100%;
+    flex-direction: row;
     
 }
+.botonOfertas2{
+    padding: 5% 15%;
+    margin-right: 5%;
+    border-radius: 2em;
+    font-size: 60%;
+    cursor: pointer;
+    transition: all 1s;
+}
 .botonOfertas{
-    padding: 8% 20%;
+    padding: 5% 13%;
     margin-top: 12%;
     border-radius: 2em;
-    font-size: 80%;
+    font-size: 60%;
     cursor: pointer;
+    transition: all 1s;
 }
 
-
+.botonOfertas2:hover,
 .botonOfertas:hover{
     background-color: rgb(59, 55, 55);
     color: white;
