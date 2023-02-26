@@ -59,7 +59,86 @@ nav ul li{
     display: none;
 }
 
+.posicionBotonwsp{
+    display: flex;
+    justify-content: start;
+    margin-left: 3%;
 
+}
+
+.botonwsp{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: fixed;
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    font-size: 100%;
+    background-color:rgb(69, 165, 69);
+    color: white;
+    z-index: 1000;
+    cursor: pointer;
+    transition: all 1s;
+    margin-top: 85vh;
+}
+
+.botonwsp:hover{
+    background-color: #fff;
+    color: rgb(69, 165, 69);;
+}
+
+
+.iconowsp{
+    font-size: 3em;
+    margin-top: 15%;
+}
+
+
+.posicionBotonCarr{
+    display: flex;
+    justify-content: end;
+    margin-right: 3%;
+}
+
+.BotonCarrito{
+    display: flex;
+    background-color: grey;
+    position: fixed;
+    border-radius: 50%;
+    height: 5em;
+    width: 5em;
+    margin-top: 85vh;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    text-align: center;
+    transition: all 1s;
+    color: #000;
+}
+.BotonCarrito:hover{
+    background: #000;
+    color: grey;
+}
+
+.iconCar{
+    font-size: 2.5em;
+}
+
+.Span{
+    position: fixed;
+    margin-top: 85vh;
+    margin-left: 6em;
+    background-color: red;
+    height: 1.8em;
+    width: 1.4em;
+    z-index: 3000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
 @media screen and (max-width:900px) {
     .checkbtn{
         display: block;

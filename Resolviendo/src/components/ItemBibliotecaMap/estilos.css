@@ -1,0 +1,123 @@
+.ContenedorBibloteca{
+    display:flex ;
+    justify-content: center;
+    align-items: center;
+}
+.gridBibloteca{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 3%;
+    padding:5%;
+    height: 100%;
+    width: 80%;
+    margin-bottom: 5%;
+    border-radius: 4em ;
+    border: 1px solid black;
+}   
+
+.FotoBiblioteca{
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+}
+
+.TituloBiblioteca{
+    margin-bottom: 5%;
+}
+
+.DescripcionBiblioteca{
+    width: 100%;
+}
+
+.DivCaractInterno{
+    border-bottom: solid 0.1em black;
+    width: 60%;
+    margin-top: 5%;
+}
+
+.ContenedorCaract{
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.SegundoContenedorCARACT{
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    flex-direction: column;
+    align-content: end;
+    margin-top: 5%;
+}
+
+.DivBtonComprarBibl{
+    margin-top: 5%;
+}
+
+.BackgroundForm{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(0,0,0,0.6);
+    top:0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+}
+.ContenedorForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    width: 60%;
+}
+
+.Formulario{
+    background: #fff;
+    height: 100%;
+    width: 100%;
+}
+
+.h1Formulario{
+    margin-top: 2%;
+}
+
+.h1FormularioPosicionamiento{
+    margin-right: 30%;
+}
+
+.XPosicion{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+.Xbton{
+    border: none;
+    padding: 5% 5%;
+    cursor: pointer;
+}
+.X{
+    border: none;
+    height: 2em;
+}
+
+.Input{
+    width: 50%;
+    height: 3em;
+}
+
+.DivInputsForm{
+    display: flex;
+    flex-direction: column;
+}
+@media screen and (max-width:900px) {
+    .gridBibloteca{
+        display: flex;
+        flex-direction: column;
+    }
+}

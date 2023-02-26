@@ -37,6 +37,7 @@ const ItemDetailContainer = () => {
             :
             null
         }
+
         </div>
 )
 }

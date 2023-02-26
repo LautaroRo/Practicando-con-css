@@ -3,7 +3,7 @@ import OfertasMap from "../OfertasMap"
 
 const Ofertas = ({Descuentos}) => {
 return (
-    <div>
+    <div className='DivOfertasInicio'>
         {Descuentos.map((AutosOfertas)=>{
             return <OfertasMap ofertas={AutosOfertas} key={AutosOfertas.id}></OfertasMap>
         })}

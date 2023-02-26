@@ -57,30 +57,3 @@
     background: #FFF;
     color: #000;
 }
-.posicionBoton{
-    display: flex;
-    justify-content: end;
-    margin-right: 3%;
-}
-
-.botonwsp{
-    position: fixed;
-    height: 5em;
-    width: 5em;
-    border-radius: 50%;
-    font-size: 100%;
-    background-color:rgb(69, 165, 69);
-    color: white;
-    z-index: 200;
-    cursor: pointer;
-}
-
-.botonwsp:hover{
-    background-color: #fff;
-    color: rgb(69, 165, 69);;
-}
-
-
-.iconowsp{
-    font-size: 2em;
-}

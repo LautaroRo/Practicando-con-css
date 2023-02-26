@@ -4,7 +4,7 @@ import Main from "../../components/Main"
 import "./estilos.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCarRear} from '@fortawesome/free-solid-svg-icons'
-import {faWhatsapp} from '@fortawesome/free-brands-svg-icons'
+
 const ItemListContainer = () => {
 
     const [products, setProducts] = useState([])
@@ -31,9 +31,6 @@ return (
                 <p className='DescripcionPrinc'> El Supra MkIV estrenó un diseño compuesto por curvas, en plena era del biodesign, y caracterizado por un imponente alerón trasero. El coche era más pequeño, más bajo y más ancho que el MkIII. Su motor de 6 cilindros en línea desarrollaba 220 CV, mientras que la variante biturbo entregaba 330 CV.</p>
                 <button className='botonPric'><FontAwesomeIcon icon={faCarRear}></FontAwesomeIcon> Comprar</button>
             </div>
-        </div>
-        <div className='posicionBoton'>
-            <button className='botonwsp'><FontAwesomeIcon className='iconowsp'icon={faWhatsapp}/></button>
         </div>
 
         {

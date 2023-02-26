@@ -4,7 +4,7 @@ import "./estilos.css"
 const OfertasMap = ({ofertas}) => {
 
     return (
-    <div>
+    <div className='DivOfertasInicio'>
         <div className='IniciOfertas'>
         <a className='LinkVer' href='#Ofertas'>Ver Ofertas</a>
         </div>
@@ -36,7 +36,8 @@ const OfertasMap = ({ofertas}) => {
 
 
         </div>
-            
+        <br />
+        <br />
     </div>
     )
 }

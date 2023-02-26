@@ -52,7 +52,7 @@
     align-items: center;
     border-radius: 1em;
     align-items: end;
-    margin-top: 15%;
+    margin-top: 8%;
     transition: all 1s;
     background: rgba(110, 110, 110, 0.92);
     color: #FFF;
@@ -67,6 +67,52 @@
 }
 .BtonDetailComprar2{
     display: none;
+}
+
+
+.divButonsSiOno{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.BtonDetail1{
+    padding: 5% 25%;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    border-radius: 1em;
+    align-items: end;
+    margin-top: 8%;
+    transition: all 1s;
+    background: rgba(74, 160, 63, 0.92);
+    color: #FFF;
+    text-decoration: none;
+    margin-right: 30%;
+}
+
+.BtonDetail2{
+    padding: 5% 25%;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    border-radius: 1em;
+    align-items: end;
+    margin-top: 8%;
+    transition: all 1s;
+    background: rgba(201, 42, 42, 0.92);
+    color: #FFF;
+    text-decoration: none;
+}
+
+.BtonDetail2:hover{
+    background: rgba(119, 30, 30, 0.877);
+}
+
+.BtonDetail1:hover{
+    background: rgba(47, 110, 47, 0.849);
 }
 
 @media screen and (max-width:900px){

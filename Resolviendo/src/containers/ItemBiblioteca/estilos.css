@@ -1,0 +1,35 @@
+.DivContenedorCart{
+    background-color: #807a7a;
+}
+
+
+
+
+.InicioBiblioteca{
+    background: linear-gradient(rgba(0,0,0, 0.50) 0%, rgba(0,0,0, 0.50) 100%), url("https://media.revistagq.com/photos/5ef9e69d09f9a6fc5dffb0ed/master/pass/coleccion-coches-elon-musk.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+
+.btonInicioBiblitoeca{
+    padding: 1.5% 7%;
+    border-radius: 2em;
+    background: rgba(110, 110, 110, 0.92);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 1s;
+    color: white;
+}
+
+.btonInicioBiblitoeca:hover{
+    background: #fff;
+    color: #000;
+}
+

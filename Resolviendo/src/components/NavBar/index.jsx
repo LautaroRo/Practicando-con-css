@@ -1,15 +1,20 @@
-import React from 'react'
+import React, { useContext} from 'react'
 import { Link } from 'react-router-dom'
 import "./estilos.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCableCar} from '@fortawesome/free-solid-svg-icons'
+import {faCableCar, faCartShopping} from '@fortawesome/free-solid-svg-icons'
+import {faWhatsapp} from '@fortawesome/free-brands-svg-icons'
+import { Shop } from '../../Context/ShopProvider'
 const NavBar = () => {
+
+    const {CountCart} = useContext(Shop)
+
 return (
     <div>
         <header>
             <nav>
                 <input type="checkbox" id="check"/>
-                <label For="check" className='checkbtn'>
+                <label htmlFor="check" className='checkbtn'>
                     <FontAwesomeIcon icon={faCableCar}></FontAwesomeIcon>
                 </label>
                 <div className='H1NavBar'>
@@ -32,6 +37,15 @@ return (
             </nav>
             
         </header>
+
+        <div className='posicionBotonwsp'>
+            <Link className='botonwsp'><FontAwesomeIcon className='iconowsp'icon={faWhatsapp}/></Link>
+        </div>
+
+        <div className='posicionBotonCarr'>
+            <span className='Span'>{CountCart()}</span>
+            <Link className='BotonCarrito' to="/Biblioteca"><FontAwesomeIcon className='iconCar' icon={faCartShopping}></FontAwesomeIcon></Link>
+        </div>
     </div>
 )
 }
