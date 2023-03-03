@@ -1,5 +1,5 @@
 .DivContenedorCart{
-    background-color: #807a7a;
+    background-color: #b7d8eb73;
 }
 
 
@@ -21,7 +21,7 @@
 .btonInicioBiblitoeca{
     padding: 1.5% 7%;
     border-radius: 2em;
-    background: rgba(110, 110, 110, 0.92);
+    background: rgba(27, 27, 27, 0.52);
     cursor: pointer;
     text-decoration: none;
     transition: all 1s;

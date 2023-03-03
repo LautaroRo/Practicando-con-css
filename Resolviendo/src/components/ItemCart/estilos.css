@@ -1,0 +1,60 @@
+.ContenedorCartDentro{
+    display: grid;
+    grid-template-columns: 40% 50% 10%;
+    width: 100%;
+}
+
+
+.DivFotoCarrito{
+    padding: 0% 10%;
+}
+
+
+.BotonQuitar{
+    cursor: pointer;
+    width: 10%;
+    color: rgb(189, 36, 36);
+}
+
+
+.FotoCarrito{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    box-shadow: 5px 5px 5px 1px;
+}
+
+.Div2Cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.Div3Cart{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.BTonesCart{
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+@media screen and (max-width:660px) {
+    .ContenedorCart{
+        width: 90%;
+        margin-right: 0%;
+    }
+}
+
+@media screen and (max-width:372px) {
+    .ContenedorCart{
+        width: 100%;
+        margin-right: 0%;
+    }
+}

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Shop } from '../../Context/ShopProvider'
 import "./estilos.css"
-import ItemBibliotecaMap from '../../components/ItemBibliotecaMap'
+import ItemBibliotecaMap from '../../components/ItemBibliotecaMap' 
 const ItemBiblioteca = () => {
     const {products} = useContext(Shop)
     return (
@@ -15,10 +15,12 @@ const ItemBiblioteca = () => {
         ?
         <h1>noHay</h1>
         :
-        <div className='DivContenedorCart' id="Biblioteca">
-            {products.map((product)=>{
-            return <ItemBibliotecaMap AutoSeleccionado={product} key={product.id}></ItemBibliotecaMap>
+        <div>
+            <div className='DivContenedorCart' id="Biblioteca">
+                {products.map((product)=>{
+                return <ItemBibliotecaMap AutoSeleccionado={product} key={product.id}></ItemBibliotecaMap>
             })}
+            </div>
         </div>
         }
     </div>

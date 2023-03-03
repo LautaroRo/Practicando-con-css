@@ -5,20 +5,24 @@ import { Link } from 'react-router-dom'
 
 const ItemDetail = ({detail}) => {
     
-    const {addProduct} = useContext(Shop)
+    const {addProduct,Sumar,Restar} = useContext(Shop)
+    
 
     const [Cantidad, setCantidad] = useState(1)
     const [Close, setClose] = useState(false)
-
+    
 
     const AgregarProducto = () =>{
         setCantidad(Cantidad)
+        
         setClose(true)
-        console.log(Cantidad)
     }
+
 
     const Agregar = () =>{
         addProduct({...detail, cantidad:Cantidad})
+        Sumar({...detail,cantidad:Cantidad})
+        Restar({...detail,cantidad:Cantidad})
     }
 
     

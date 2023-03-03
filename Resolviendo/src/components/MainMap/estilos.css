@@ -49,7 +49,6 @@
 .FotoSombra{
     background-size: cover;
     box-shadow: 6px 1px 5px 0px rgba(63, 54, 54, 0.75);
-    z-index: 0;
 }
 
 
@@ -118,4 +117,10 @@
         margin-bottom: 2em;
     }
 
+}
+
+@media screen and (max-width:900px){
+    .Carousel{
+        margin-left: 0;
+    }
 }

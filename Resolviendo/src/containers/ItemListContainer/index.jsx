@@ -13,7 +13,7 @@ const ItemListContainer = () => {
         const promesa = new Promise((acc) => {
             setTimeout(() => {
                 acc(productos);
-            }, 3000);
+            }, 1000);
         });
     
         promesa

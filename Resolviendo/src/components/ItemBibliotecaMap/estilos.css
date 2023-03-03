@@ -13,6 +13,7 @@
     margin-bottom: 5%;
     border-radius: 4em ;
     border: 1px solid black;
+    background-color: rgba(158, 240, 240, 0.705);
 }   
 
 .FotoBiblioteca{
@@ -69,15 +70,12 @@
     width: 100%;
 }
 .ContenedorForm{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 60%;
     width: 60%;
 }
 
 .Formulario{
-    background: #fff;
+    background: #635f5f;
     height: 100%;
     width: 100%;
 }
@@ -86,35 +84,61 @@
     margin-top: 2%;
 }
 
-.h1FormularioPosicionamiento{
-    margin-right: 30%;
-}
 
 .XPosicion{
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: space-between;
+    padding: 0.5em 2.5em;
+    margin-bottom:7%;
 }
-
 .Xbton{
     border: none;
-    padding: 5% 5%;
+    padding: 2% 2%;
     cursor: pointer;
+    background-color: #d8c9c9;
 }
 .X{
     border: none;
     height: 2em;
+    border: none;
+    padding: 5% 5%;
+    cursor: pointer;
+}
+
+.XPosicion12{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding: 0.5em 0.5em;
+    width: 100%;
 }
 
 .Input{
-    width: 50%;
+    width: 80%;
     height: 3em;
+    border-radius: 1em;
 }
 
 .DivInputsForm{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 50% 50%;
 }
+
+.Inputs1{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.Inputs2{
+    margin-top:15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 @media screen and (max-width:900px) {
     .gridBibloteca{
         display: flex;

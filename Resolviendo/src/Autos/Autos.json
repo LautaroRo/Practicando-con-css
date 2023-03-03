@@ -8,7 +8,8 @@
         "Ciudad":"Hong Kong",
         "Motor":"2JZ-GTE de seis cilindros en línea y 3.0 litros biturbo.",
         "Km":0,
-        "Año":"2002"
+        "Año":"2002",
+        "PrecioSumado": 60000
 
     },
     {
@@ -20,6 +21,7 @@
         "Ciudad":"Nueva York",
         "Motor":"V8 de 9 litros de desplazamiento y doble turbocargador de 1,650 hp",
         "Km":0,
-        "Año": "1970"
+        "Año": "1970",
+        "PrecioSumado": 80000
     }
 ]
