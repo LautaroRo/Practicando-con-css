@@ -1,30 +1,42 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Shop } from '../../Context/ShopProvider'
 import "./estilos.css"
-import ItemBibliotecaMap from '../../components/ItemBibliotecaMap' 
+import BibliotecaMap from '../../components/BibliotecaMap' 
 const ItemBiblioteca = () => {
-    const {products} = useContext(Shop)
+
+    const {Autos,seguirPeliculas} = useContext(Shop)
+
+    useEffect(()=>{
+        seguirPeliculas()
+    },[])
+
+    console.log(Autos)
+
     return (
     <div>
+        
         <div className='InicioBiblioteca'>
                 <a href="#Biblioteca" className='btonInicioBiblitoeca'>Ver Biblioteca</a>
-        </div>    
+        </div>
         {
 
-        products.length === 0
+    Autos.length === 0
         ?
         <h1>noHay</h1>
         :
         <div>
-            <div className='DivContenedorCart' id="Biblioteca">
-                {products.map((product)=>{
-                return <ItemBibliotecaMap AutoSeleccionado={product} key={product.id}></ItemBibliotecaMap>
+            {Autos.map((Autos)=>{
+                return <BibliotecaMap Autos={Autos} key={Autos.id}/>
             })}
-            </div>
         </div>
-        }
+}
     </div>
     )
 }
 
 export default ItemBiblioteca
+
+
+
+
+

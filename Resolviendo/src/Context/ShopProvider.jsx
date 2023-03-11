@@ -1,21 +1,24 @@
 import React,{useState} from 'react'
 import { createContext } from "react";
+import { GuardarLocal } from '../components/Helper';
 
 export const Shop = createContext()
 
 
 const ShopProvider = ({children}) => {
 
-    const [products, setProducts] = useState([])
+    const [Autos, setAutos] = useState([])
 
     const addProduct = (product) =>{
         const isInCart = producstIncart(product.id)
         if(isInCart){
-            const productoRep = products.find(element => element.id === product.id)
+            const productoRep = Autos.find(element => element.id === product.id)
             productoRep.cantidad += product.cantidad
-            setProducts([...products])
+            setAutos([...Autos])
+            GuardarLocal("Autos", [...Autos])
         }else{
-            setProducts([...products,product])
+            setAutos([...Autos,product])
+            GuardarLocal("Autos",[...Autos,product])
         }
 
         
@@ -26,10 +29,11 @@ const ShopProvider = ({children}) => {
         
         if(isInCart){
 
-                let productoRep = products.find(element => element.id === product.id)
+                let productoRep = Autos.find(element => element.id === product.id)
                 productoRep.cantidad += 1
                 productoRep.Precio += productoRep.PrecioSumado
-                setProducts([...products])
+                setAutos([...Autos])
+                GuardarLocal("Autos",[...Autos])
         }
     }
 
@@ -37,57 +41,67 @@ const ShopProvider = ({children}) => {
         const isInCart = producstIncart(product.id)
         
         if(isInCart){
-                let productoRep = products.find(element => element.id === product.id)
+                let productoRep = Autos.find(element => element.id === product.id)
                 productoRep.cantidad -= 1
                 productoRep.Precio -= productoRep.PrecioSumado
                 if(productoRep.cantidad < 1){
                     productoRep.cantidad += 1 
                     productoRep.Precio += productoRep.PrecioSumado
+        
                 }
-                setProducts([...products])
+                setAutos([...Autos])
+                GuardarLocal("Autos",[...Autos])
         }
     }
 
     const producstIncart = (id) =>{
-        return products.some(element => element.id === id)
+        return Autos.some(element => element.id === id)
     }
-
 
 
     const CountCart = () =>{
         let CantidadTotal = 0
 
-        for(const product of products){
+        for(const product of Autos){
             CantidadTotal += product.cantidad
         }
         return CantidadTotal
     }
 
     const ElminarTodo = () =>{
-        setProducts([])
+        setAutos([])
     }
 
     const CountCart2 = () =>{
         let CantidadTotal = 0
 
-        for(const product of products){
+        for(const product of Autos){
             CantidadTotal += product.Precio
         }
 
         return CantidadTotal
     }
 
+    const seguirPeliculas = () =>{
 
+        let Autos = JSON.parse(localStorage.getItem("Autos"))
+
+        setAutos(Autos)
+        console.log(Autos)
+
+        return Autos
+    }
 
 
     const Eliminar = (id) =>{
-        console.log(id, "chau")
-        const updateCart = products.filter(element => element.id !== id)
-        setProducts(updateCart)
+        const AutosElim = seguirPeliculas()
+        const updateCart = AutosElim.filter(element => element.id !== id)
+        setAutos(updateCart)
+        localStorage.setItem("Autos",JSON.stringify(updateCart))
     }
 
     return (
-        <Shop.Provider value = {{products, addProduct, CountCart,Eliminar,ElminarTodo,CountCart2,Sumar,Restar}}>
+        <Shop.Provider value = {{Autos, addProduct, CountCart,Eliminar,ElminarTodo,CountCart2,Sumar,Restar,setAutos,seguirPeliculas}}>
             {children}
         </Shop.Provider>
 )

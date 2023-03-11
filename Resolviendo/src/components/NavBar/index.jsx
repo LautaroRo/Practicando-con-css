@@ -9,7 +9,7 @@ import ItemCart from "../ItemCart"
 
 const NavBar = () => {
 
-    const {CountCart,CountCart2 , products} = useContext(Shop)
+    const {CountCart,CountCart2 , Autos} = useContext(Shop)
     
 
     const [Close, setClose] = useState(false)
@@ -74,7 +74,7 @@ return (
                     <h1>Carrito:</h1>
                     <p>{CountCart2()}</p>
                     
-                        {products.map((product)=>{
+                        {Autos.map((product)=>{
                                 return <ItemCart Producto={product} key={product.id}></ItemCart>
                         })}
                     <div/>

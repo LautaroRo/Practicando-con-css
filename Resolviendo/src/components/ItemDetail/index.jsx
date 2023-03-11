@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react'
 import "./estilos.css"
 import { Shop } from "../../Context/ShopProvider";
-import { Link } from 'react-router-dom'
+import { json, Link } from 'react-router-dom'
+import { GuardarLocal } from '../Helper';
+
 
 const ItemDetail = ({detail}) => {
     
     const {addProduct,Sumar,Restar} = useContext(Shop)
-    
 
     const [Cantidad, setCantidad] = useState(1)
     const [Close, setClose] = useState(false)
@@ -14,7 +15,6 @@ const ItemDetail = ({detail}) => {
 
     const AgregarProducto = () =>{
         setCantidad(Cantidad)
-        
         setClose(true)
     }
 
