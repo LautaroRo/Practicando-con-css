@@ -1,6 +1,6 @@
 import React from 'react'
 import OfertasMap from "../OfertasMap"
-
+import "./estilos.css"
 const Ofertas = ({Descuentos}) => {
 return (
     <div className='DivOfertasInicio'>

@@ -1,0 +1,52 @@
+.footer{
+    background-color: rgb(97, 95, 97);
+    height: 10em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+.redescontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.liFooter{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 9%;
+}
+
+.aFooter{
+    padding: 0 3em;
+    background-color: rgb(97, 95, 97);
+    color: white;
+    line-height: 2em;
+    height: 1.2em;
+    margin-right: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.redescontainer li a:hover{
+    transform: translateY(-1px) scale(1.04);
+    box-shadow: 1em 2em 3em rgb(97, 95, 97);
+    filter: none;
+}
+
+
+
+.aFooter{
+    margin-top: 2em;
+}
+

@@ -68,10 +68,6 @@ const ShopProvider = ({children}) => {
         return CantidadTotal
     }
 
-    const ElminarTodo = () =>{
-        setAutos([])
-    }
-
     const CountCart2 = () =>{
         let CantidadTotal = 0
 
@@ -85,9 +81,8 @@ const ShopProvider = ({children}) => {
     const seguirPeliculas = () =>{
 
         let Autos = JSON.parse(localStorage.getItem("Autos"))
-
         setAutos(Autos)
-        console.log(Autos)
+        console.log(Autos,"hola")
 
         return Autos
     }
@@ -101,7 +96,7 @@ const ShopProvider = ({children}) => {
     }
 
     return (
-        <Shop.Provider value = {{Autos, addProduct, CountCart,Eliminar,ElminarTodo,CountCart2,Sumar,Restar,setAutos,seguirPeliculas}}>
+        <Shop.Provider value = {{Autos, addProduct, CountCart,CountCart2,Sumar,Restar,setAutos,seguirPeliculas,Eliminar}}>
             {children}
         </Shop.Provider>
 )

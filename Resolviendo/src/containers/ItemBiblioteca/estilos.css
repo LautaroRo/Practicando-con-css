@@ -36,13 +36,39 @@
 
 
 
+.DivNohay{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center ;
+    height: 50vh;
+}
 
 
 
+.DivNohay h1{
+    color: white;
+    margin-bottom: 1%;
+}
 
 
+.LinkVolverNo{
+    display: flex;
+    width: 20%;
+    height: 6%;
+    background: rgb(42, 238, 212);
+    cursor: pointer;
+    transition: all 2s ease;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    justify-content: center;
+    align-items: center;
+}
 
-
+.LinkVolverNo:hover{
+    background: #08eb26;
+}
 
 
 

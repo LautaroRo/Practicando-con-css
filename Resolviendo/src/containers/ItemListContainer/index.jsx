@@ -1,14 +1,20 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import productos from "../../Autos/Autos.json"
 import Main from "../../components/Main"
 import "./estilos.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCarRear} from '@fortawesome/free-solid-svg-icons'
+import { Shop } from '../../Context/ShopProvider'
+
 
 const ItemListContainer = () => {
 
+    const {seguirPeliculas} = useContext(Shop)
     const [products, setProducts] = useState([])
 
+    useEffect(()=>{
+        seguirPeliculas()
+    },[])
     useEffect(()=>{
         const promesa = new Promise((acc) => {
             setTimeout(() => {
@@ -32,7 +38,6 @@ return (
                 <button className='botonPric'><FontAwesomeIcon icon={faCarRear}></FontAwesomeIcon> Comprar</button>
             </div>
         </div>
-
         {
             Object.keys(products).length === 0
             ?

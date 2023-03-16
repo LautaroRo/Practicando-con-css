@@ -6,6 +6,7 @@ import ItemOfertas from './containers/ItemOfertas/Index';
 import ItemDetailContainer from './containers/ItemDetailContainer';
 import ShopProvider from './Context/ShopProvider';
 import ItemBiblioteca from './containers/ItemBiblioteca';
+import Footer from './containers/Footer';
 
 
 
@@ -22,6 +23,7 @@ function App() {
           <Route path='/detail/:id' element={<ItemDetailContainer/>}></Route>
           <Route path="/Biblioteca" element={<ItemBiblioteca/>}></Route>
         </Routes>
+        <Footer/>
     </div>
     </BrowserRouter>
   </ShopProvider>

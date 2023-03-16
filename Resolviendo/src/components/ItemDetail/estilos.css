@@ -17,20 +17,32 @@
     display: grid;
     grid-template-columns: 40% 60%;
     padding: 5% 1%;
-    background-color: rgb(54, 44, 44);
+    background-color: #29447efd;
+    margin-bottom: 10%;
+    margin-top: 10%;
+    border: 1px solid white;
+    width: 99%;
+    
 }
 
 .FotoDetail{
-    width: 100%;
+    display: flex;
+    width: 90%;
     box-shadow: 1px 5px 7px 10px rgba(34, 33, 33, 0.75);
-    z-index: 100;
     height: 100%;
     background-size: cover;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5%;
+    text-align: center;
 }
 
 .imgDetail{
+    display: flex;
     width: 100%;
     height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .TextosDetail{

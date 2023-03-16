@@ -2,14 +2,14 @@ import React, { useContext, useState} from 'react'
 import { Link } from 'react-router-dom'
 import "./estilos.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCableCar, faCartShopping,faX} from '@fortawesome/free-solid-svg-icons'
+import {faCableCar, faCartShopping,faX, faTrash} from '@fortawesome/free-solid-svg-icons'
 import {faWhatsapp} from '@fortawesome/free-brands-svg-icons'
 import { Shop } from '../../Context/ShopProvider'
 import ItemCart from "../ItemCart"
 
 const NavBar = () => {
 
-    const {CountCart,CountCart2 , Autos} = useContext(Shop)
+    const {CountCart , Autos} = useContext(Shop)
     
 
     const [Close, setClose] = useState(false)
@@ -23,7 +23,6 @@ const NavBar = () => {
     const Desactivar = () =>{
         setClose(false)
     }
-
 return (
     <div>
         <header>
@@ -63,7 +62,10 @@ return (
         {
             Close === false
             ?
-            null
+            <div className="ContenedorPrincipalCart1">
+                <div className='ContenedorCart1'>
+                </div>
+            </div>
             :
             <div className="ContenedorPrincipalCart">
                 <div className='ContenedorCart'>
@@ -72,9 +74,15 @@ return (
                         onClick={Desactivar}><FontAwesomeIcon className='XCart' icon={faX}></FontAwesomeIcon></button>
                     </div>
                     <h1>Carrito:</h1>
-                    <p>{CountCart2()}</p>
-                    
-                        {Autos.map((product)=>{
+                        {
+                        Autos.length===0
+                        ?
+                        <div className='DivNohayCart'>
+                            <h2 className='h1Volver'>No tienes productos en el carrito.</h2>
+                                <Link to="/" className='LinkVolverNoCart'>Volver</Link>
+                        </div>
+                        :
+                        Autos.map((product)=>{
                                 return <ItemCart Producto={product} key={product.id}></ItemCart>
                         })}
                     <div/>

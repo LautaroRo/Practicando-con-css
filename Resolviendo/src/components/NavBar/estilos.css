@@ -155,22 +155,26 @@ nav ul li{
     height: 100vh;
     width: 100%;
 }
+.ContenedorCart1{
+    top: 1000;
+}
 
 .ContenedorCart{
-    margin-right: 3%;
+    margin-right: 2%;
     position: fixed;
-    background-color: #aca061;
-    height: 70%;
+    background-color: #289261;
+    height: 95%;
     width: 50%;
-    transition: all 1s;
     min-width: 18em;
-    z-index: 2000;
+    z-index: 22000;
+    transition: all 0.5s linear;
+    border-radius: 3%;
+    border: 3px solid white;
 }
 
 .PosicionBotonSkip{
     display: flex;
-    justify-content: end;
-    
+    justify-content: flex-end;
 }
 
 
@@ -184,12 +188,64 @@ nav ul li{
     cursor: pointer;
     margin-right: 2%;
     margin-top: 2%;
-    border-radius: 100%;
+    border-radius: 30%;
     padding: 1% 2%;
+    transition: all 2s ease;
+}
+
+.BtonExitCart:hover{
+    background: rgb(131, 7, 233);
+    color: white;
+}
+
+.EliminarTodo{
+    border-radius: 20%;
+    padding: 1em 1em;
+    margin-left: 2%;
+    margin-top: 3%;
+    cursor: pointer;
+    transition: all 2s ease;
+}
+
+.EliminarTodo:hover{
+    background: black;
+    color: red;
+}
+.Trash{
+    font-size: 2em;
+}
+.DivNohayCart{
+    display: flex;
+justify-content: center;
+flex-direction: column;
+align-items:center ;
+height: 70vh;
+}
+
+.h1Volver{
+    color: black;
+    margin-bottom: 10%;
+}
+
+.LinkVolverNoCart{
+    display: flex;
+    width: 50%;
+    height: 6%;
+    background: rgb(223, 6, 53);
+    cursor: pointer;
+    transition: all 2s ease;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    justify-content: center;
+    align-items: center;
 }
 
 
-
+.LinkVolverNoCart:hover{
+    background-color: #000;
+    color: white;
+}
 
 @media screen and (max-width:900px) {
     .checkbtn{

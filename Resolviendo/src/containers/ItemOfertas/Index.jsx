@@ -8,9 +8,8 @@ const ItemOfertas = () => {
 
     useEffect(()=>{
         const promesa = new Promise((acc)=>{
-            setTimeout(()=>{
                 acc(ofertas)
-            },1000)
+
         })
 
         promesa

@@ -17,7 +17,7 @@ const ItemCart = ({Producto}) => {
         
         <div className='Div2Cart'>
             <h3>{Producto.Modelo}</h3>
-            <p>{VerPrecio}</p>  
+            <p>{VerPrecio} $</p>  
             <p className='BotonQuitar' onClick={()=>Eliminar(Producto.id)}>Quitar</p>
         </div>
         <div className='Div3Cart'>

@@ -1,8 +1,31 @@
-import React from 'react'
+import React, { useContext, useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
+import { Shop } from '../../Context/ShopProvider'
 
 import "./estilos.css"
 const OfertasMap = ({ofertas}) => {
 
+    const {addProduct,Sumar,Restar,seguirPeliculas} = useContext(Shop)
+    const [Cantidad, setCantidad] = useState(1)
+    const [Close, setClose] = useState(false)
+    
+    useEffect(()=>{
+        seguirPeliculas()
+    },[])
+
+    const AgregarProducto = () =>{
+        setCantidad(Cantidad)
+        setClose(true)
+    }
+
+
+    const Agregar = () =>{
+        addProduct({...ofertas, cantidad:Cantidad})
+        Sumar({...ofertas,cantidad:Cantidad})
+        Restar({...ofertas,cantidad:Cantidad})
+    }
+
+    
     return (
     <div className='DivOfertasInicio'>
         <div className='IniciOfertas'>
@@ -18,23 +41,30 @@ const OfertasMap = ({ofertas}) => {
             <div className='ModeloDescripcion'>
                 <h2 className='tituloOferta'>{ofertas.Modelo}</h2>
                 <p className='descripcionOfertas'>{ofertas.Descripcion}</p>
-
                 <div className='PreciosYboton'>
                     <div className='Precios'>
-                        <strike>{ofertas.Precio1}$</strike>
-                        <p className='PrecioDeOferta'>{ofertas.Precio2}$</p>
+                        <strike>{ofertas.Precio2}$</strike>
+                        <p className='PrecioDeOferta'>{ofertas.Precio}$</p>
                     </div>
                     <div className='DivBotonOfertas'>
-                        <button className='botonOfertas2'>Info</button>
-                        <button className='botonOfertas'>comprar</button>
+                        <button to="/Biblioteca" className='botonOfertas' onClick={AgregarProducto}>Comprar</button>
                     </div>
-                    
                 </div>
+                {
+                        Close === true
+                        ?
+                        <div className='divButonsSiOnoOfertas'>
+                            <Link to="/Biblioteca" className="BtonOfertas1" onClick={Agregar}>
+                                Confirmar
+                            </Link>
+                            <Link to="/" className="BtonOfertas2">
+                                volver    
+                            </Link>
+                        </div>
+                        :
+                        null
+            }
             </div>
-            
-
-
-
         </div>
         <br />
         <br />

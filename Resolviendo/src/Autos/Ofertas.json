@@ -1,10 +1,15 @@
 [
     {
         "Modelo":"Honda Civic",
-        "Precio1": 90000,
-        "Precio2":40000,
+        "Precio2": 90000,
+        "Precio":40000,
         "Img":"https://rare-gallery.com/uploads/posts/537261-honda-civic.jpg",
         "Descripcion": "El Honda Civic es uno de los modelos del segmento C con más personalidad. Cuenta con una imagen totalmente diferenciadora, un interior con buena calidad percibida, una posición de conducción baja y deportiva y un gran maletero que aumenta la versatilidad de uso del vehículo.",
-        "id":3
+        "id":3,
+        "PrecioSumado": 40000,
+        "Ciudad":"Buenos Aires",
+        "Motor":"Sedan 2017 1.5 VTEC Turbo CVT Executive",
+        "Km":0,
+        "Año":"2012"
     }
 ]
