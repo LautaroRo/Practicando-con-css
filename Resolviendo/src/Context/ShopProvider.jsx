@@ -79,12 +79,14 @@ const ShopProvider = ({children}) => {
     }
 
     const seguirPeliculas = () =>{
-
-        let Autos = JSON.parse(localStorage.getItem("Autos"))
-        setAutos(Autos)
-        console.log(Autos,"hola")
-
-        return Autos
+        let Autoss = JSON.parse(localStorage.getItem("Autos"))
+        if(Autoss.length === 0){
+            setAutos(Autoss)
+        }else{
+            console.log("No hay autos")
+        }
+        
+        return Autoss
     }
 
 
