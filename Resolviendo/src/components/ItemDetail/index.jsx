@@ -11,6 +11,7 @@ const ItemDetail = ({detail}) => {
 
     const [Cantidad, setCantidad] = useState(1)
     const [Close, setClose] = useState(false)
+
     
     useEffect(()=>{
         seguirPeliculas()
@@ -20,7 +21,8 @@ const ItemDetail = ({detail}) => {
         setClose(true)
     }
 
-    
+
+
     const Agregar = () =>{
         addProduct({...detail, cantidad:Cantidad})
         Sumar({...detail,cantidad:Cantidad})
@@ -35,7 +37,7 @@ const ItemDetail = ({detail}) => {
         </div>
     <div className='ContenedorDetail' id="detail">
         <div className='TextosDetail'>
-            <h1>{detail.Modelo}</h1>
+            <h1 className='h1Detail'>{detail.Modelo}</h1>
             <p>{detail.Descripcion}</p>
             <button className="BtonDetailComprar" onClick={AgregarProducto}>Agregar a biblitoeca</button>
     {
@@ -53,14 +55,12 @@ const ItemDetail = ({detail}) => {
         null
     }
         </div>
-        <div className='FotoDetail'>
-            <img className='imgDetail' src={detail.Img} alt="7" />
-        </div>
-        <div className='DivBtonDetailComprar2'>
-            <Link to="/Biblioteca"><button className='BtonDetailComprar2'>Agregar a biblitoeca</button></Link>
+            <div className='FotoDetail'>
+                <img className='imgDetail' src={detail.Img} alt="7" />
+            </div>
         </div>
     </div>
-</div>
+
 )
 }
 

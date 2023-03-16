@@ -119,6 +119,10 @@
     text-decoration: none;
 }
 
+
+.h1Detail{
+    margin-bottom: 10%;
+}
 .BtonDetail2:hover{
     background: rgba(119, 30, 30, 0.877);
 }
@@ -131,10 +135,6 @@
     .ContenedorDetail{
         display: flex;
         flex-direction: column;
-    }
-
-    .BtonDetailComprar{
-        display: none;
     }
 
     .DivBtonDetailComprar2{
