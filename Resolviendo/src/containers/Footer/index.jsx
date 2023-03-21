@@ -1,7 +1,6 @@
 import React from 'react'
 import "./estilos.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faPhone} from '@fortawesome/free-solid-svg-icons'
 import {faInstagram, faTwitter,faFacebook} from '@fortawesome/free-brands-svg-icons'
 
 const Footer = () => {

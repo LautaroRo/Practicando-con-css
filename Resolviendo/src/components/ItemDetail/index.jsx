@@ -35,6 +35,7 @@ const ItemDetail = ({detail}) => {
         <div className='FondoDetail'>
             <a className='LinkVer' href='#detail'>Ver Producto</a>
         </div>
+    <div className="detailFlex">
     <div className='ContenedorDetail' id="detail">
         <div className='TextosDetail'>
             <h1 className='h1Detail'>{detail.Modelo}</h1>
@@ -58,8 +59,10 @@ const ItemDetail = ({detail}) => {
             <div className='FotoDetail'>
                 <img className='imgDetail' src={detail.Img} alt="7" />
             </div>
+            </div>
         </div>
     </div>
+
 
 )
 }

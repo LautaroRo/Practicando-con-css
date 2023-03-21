@@ -65,7 +65,7 @@
 
 .divSteam{
     display: flex;
-    background-color: #fff;
+    background-color: #ffffff7a;
     color: black;
     justify-content: center;
     align-items: center;
@@ -102,6 +102,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
     }
 
     .divSteam{
@@ -118,4 +119,23 @@
         margin-bottom: 2em;
     }
 
+    .Carousel{
+        margin-left: 1em;
+    }
+
+
+}
+
+
+@media screen and (max-width:410px){
+    .PrecioYboton{
+        display: flex;
+        flex-direction: column;
+        margin-right: 20%;
+    }
+
+
+    .LinkMap{
+        padding: 1em 8em;
+    }
 }

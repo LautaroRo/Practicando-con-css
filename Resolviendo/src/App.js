@@ -9,13 +9,16 @@ import ItemBiblioteca from './containers/ItemBiblioteca';
 import Footer from './containers/Footer';
 
 
-
 function App() {
   return (
 
   <ShopProvider>
+    
     <BrowserRouter>
-    <div className='divBody'>
+    
+    
+      
+      <div className='divBody'>
         <Nav></Nav>
         <Routes>
           <Route path="/" element={<ItemListContainer/>}/>
@@ -24,7 +27,7 @@ function App() {
           <Route path="/Biblioteca" element={<ItemBiblioteca/>}></Route>
         </Routes>
         <Footer/>
-    </div>
+      </div>
     </BrowserRouter>
   </ShopProvider>
     

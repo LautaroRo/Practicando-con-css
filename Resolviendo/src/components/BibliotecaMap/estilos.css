@@ -208,10 +208,11 @@
     margin-top: 10%;
 }
 .BtonComprarBibl{
-    padding: 1.4em 6.5em;
+    padding: 1.4em;
     cursor: pointer;
     background:rgba(245, 244, 244, 0.822);
-    border-radius: 1%;
+    border-radius:9%;
+    width: 100%;
 }
 
 
@@ -223,10 +224,17 @@
 .btonComprar:hover{
     background: rgb(66, 49, 221);
 }
-@media screen and (max-width:900px) {
+
+@media screen and (max-width:1000px) {
     .gridBibloteca{
         display: flex;
         flex-direction: column;
+        padding: 2em;
+    }
+
+    .ContenedorCaract{
+        margin-left: 0;
+        margin-top: 5%;
     }
 }
 

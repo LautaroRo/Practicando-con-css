@@ -13,6 +13,7 @@ nav{
 
 .h1{
     font-size: 2em;
+    color: yellow;
 }
 
 nav ul{
@@ -163,7 +164,7 @@ nav ul li{
     margin-right: 2%;
     position: fixed;
     background-color: #289261;
-    height: 95%;
+    height: 78%;
     width: 50%;
     min-width: 18em;
     z-index: 22000;
