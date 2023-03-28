@@ -1,6 +1,6 @@
 .ContenedorCartDentro{
     display: grid;
-    grid-template-columns: 40% 50% 10%;
+    grid-template-columns: 50% 40% 10%;
     width: 100%;
     margin-bottom: 6%;
     
@@ -52,10 +52,15 @@
         margin-right: 0%;
     }
 }
-
+@media screen and (max-width:600px){
+    .ContenedorCartDentro{
+        height: 10em;
+    }
+}
 @media screen and (max-width:372px) {
     .ContenedorCart{
         width: 100%;
+        
         margin-right: 0%;
     }
 }

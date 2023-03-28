@@ -49,9 +49,9 @@ const OfertasMap = ({ofertas}) => {
                 {
                     StateTrue === true
                     ?
-                    <button className='BtonCard' onClick={activar}><FontAwesomeIcon icon={faMinus}></FontAwesomeIcon></button>
+                    <button className='BtonCardMinus' onClick={activar}><FontAwesomeIcon icon={faMinus}></FontAwesomeIcon></button>
                     :
-                    <button className='BtonCard' onClick={Desactivar} onDoubleClick={() => setStateTrue(false)}><FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></button>
+                    <button className='BtonCardPlus' onClick={Desactivar} onDoubleClick={() => setStateTrue(false)}><FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></button>
                 }
                     </div>
                 <div className='dar FotoSombra'>
