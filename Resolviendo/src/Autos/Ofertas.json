@@ -11,5 +11,19 @@
         "Motor":"Sedan 2017 1.5 VTEC Turbo CVT Executive",
         "Km":0,
         "Año":"2012"
+    },
+
+    {
+        "Modelo":"Mercedes-Benz Clase C",
+        "Precio2": 120000,
+        "Precio":80000,
+        "Img":"https://autotest.com.ar/wp-content/uploads/2021/02/MERCEDES-BENZ-CLASE-C-2022.jpg",
+        "Descripcion": "El Mercedes-Benz Clase C es un automóvil de gama alta (automóvil de turismo del segmento D) producido por el fabricante alemán Mercedes-Benz desde el año 1993. Es el sucesor del Mercedes-Benz 190.",
+        "id":4,
+        "PrecioSumado": 80000,
+        "Ciudad":"Boston",
+        "Motor":"En gasolina, el Mercedes Clase C usa motores M254 de familia modular con microhibridación EQ Boost (reciben por tanto la etiqueta ECO de la DGT) con potencias que van desde los 170 CV (C 180) hasta los 258 CV del C 300.",
+        "Km":0,
+        "Año":"1993"
     }
 ]

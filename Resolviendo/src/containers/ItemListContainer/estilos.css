@@ -1,3 +1,4 @@
+
 .contenedor{
     margin: 0;
     padding: 0;
@@ -56,6 +57,54 @@
 .contenedorAutos .botonPric:hover{
     background: #FFF;
     color: #000;
+}
+
+
+.h1Inicio{
+    color: white;
+    position: relative;
+    font-size: 3em;
+    animation-name: h;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+
+.h1Inicio::after{
+    content: "";
+    width: 100%;
+    border: 1px solid white;
+    display: block;
+    position:absolute;
+    animation-name: h;
+    animation-duration: 2s;
+    animation-delay: 1s;
+}
+
+.divAn{
+    display: flex;
+    margin: 0 2em;
+    margin-bottom:2% ;
+}
+
+
+.aInicio{
+    text-decoration: none;
+    color: white;
+}
+
+
+.aInicio:hover{
+    color: black;
+}
+@keyframes h {
+    from{
+        transform: translatex(600px);
+    }
+
+    to{
+        transform: translatex(0);
+    }
 }
 
 

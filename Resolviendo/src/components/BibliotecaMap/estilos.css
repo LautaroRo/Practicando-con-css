@@ -14,8 +14,11 @@
     margin-bottom: 5%;
     border-radius: 4em ;
     border: 1px solid white;
-    background-color: #2b2b2c;
-    color: white;
+    background: #136a8a;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #267871, #136a8a);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #267871, #136a8a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    color: black;
 }   
 
 .FotoBiblioteca{
@@ -26,16 +29,30 @@
 
 .TituloBiblioteca{
     margin-bottom: 5%;
+    position: relative;
+}
+
+
+.TituloBiblioteca::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    border: 1px solid black;
+    display: block;
 }
 
 .DescripcionBiblioteca{
     width: 100%;
+    line-height: 1.5em;
+    font-weight: 600;
+    font-size: 1.3em
 }
 
 .DivCaractInterno{
     border-bottom: solid 0.1em black;
-    width: 60%;
+    width: 100%;
     margin-top: 5%;
+    color: #070707;
 }
 
 .ContenedorCaract{
@@ -58,6 +75,7 @@
 }
 
 .BackgroundForm{
+    position: fixed;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -70,6 +88,43 @@
     position: fixed;
     height: 100vh;
     width: 100%;
+    animation-name: formi;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    transition: all 2s;
+    z-index: 1;
+}
+
+
+.BackgroundForm1{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(20, 20, 20, 0.6);
+    top:1000px;
+    left: 0;
+    right: 0;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    animation-name: formiBack;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    transition: all 2s;
+    z-index: 1;
+}
+
+@keyframes formiBack{
+    from{
+        transform: translateY(-1000px);
+    }
+
+    to{
+        transform: translateY(100px);
+    }
 }
 .ContenedorForm{
     height: 55%;
@@ -77,31 +132,64 @@
     transition: all 1.5s linear;
 }
 
+@keyframes formi{
+    from{
+        transform: translateX(-1000px);
+    }
 
+    to{
+        transform: translateY(0px);
+    }
+}
 .Formulario{
-    background: #94c2db;
-    height: 90%;
+    background: #2980b9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2c3e50, #2980b9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2c3e50, #2980b9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+    height: 100%;
     width: 100%;
     border-radius: 2%;
 }
+
 
 .h1Formulario{
     margin-top: 2%;
 }
 
+.h2Inputs2,
+.h2Inputs1{
+    position: relative;
+}
+
+.h2Inputs2::after,
+.h2Inputs1::after{
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    border: 1px solid rgb(7, 17, 20);
+}
 
 .XPosicion{
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.5em 2.5em;
-    margin-bottom:2.5%;
 }
 .Xbton{
     border: none;
     padding: 2% 2%;
     cursor: pointer;
-    background-color: #94c2db;
+    border-radius: 10%;
+    background-color: black;
+    color: white;
+    transition: all 2s;
+}
+
+
+.Xbton:hover{
+    background-color: white;
+    color: black;
 }
 .X{
     border: none;
@@ -111,6 +199,16 @@
     cursor: pointer;
 }
 
+.caracth2{
+    position: relative;
+}
+.caracth2::after{
+    content: "";
+    width: 100%;
+    display: block;
+    border: 1px solid black;;
+    position: absolute;
+}
 .XPosicion12{
     display: flex;
     align-items: end;
@@ -120,7 +218,7 @@
 }
 
 .Input{
-    width: 50%;
+    width: 70%;
     margin-top: 2%;
     background: none;
     height: 3em;
@@ -128,7 +226,6 @@
     border-left: 0;
     border-right: 0;
     border-bottom: 1px solid black;
-    background:  #94c2db;
     margin-top: 5%;
     color: white;
 }
@@ -194,30 +291,197 @@
     background: rgb(240, 143, 143);
 }
 
-
-.btonComprar{
+.DivBtonComprar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 8%;
-    padding: 1em 1em;
-    width: 60%;
+    padding: 0 5em;
+}
+.btonComprar{
+    text-decoration: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    padding: 0.5em 3em;
+    color:#888;
+    font-size: 1.6em;
+    background-color: #262c37;
+    transition: 0.5s;
     cursor: pointer;
-    background: rgb(51, 50, 50);
-    color: white;
+}
+.btonComprar span{
+    display: block;
+    position: absolute;
+    background-color: #06d8cd;
+}
+
+.btonComprar span:nth-child(1){
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+.btonComprar:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+
+.btonComprar span:nth-child(2){
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    transform: scalex(0);
+    transform-origin:right;
+    transition: transform 0.5s;
+}
+
+.btonComprar:hover span:nth-child(2){
+    transform: scalex(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.btonComprar span:nth-child(3){
+    right: 0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    transform: scaley(0);
+    transform-origin:top;
+    transition: transform 0.5s;
+}
+
+.btonComprar:hover span:nth-child(3){
+    transform: scalex(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+
+.btonComprar span:nth-child(4){
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    transform: scalex(0);
+    transform-origin:right;
+    transition: transform 0.5s;
+}
+
+.btonComprar:hover span:nth-child(4){
+    transform: scalex(1);
+    transform-origin: left;
+    transition: transform 0.5s;
 }
 
 .DivBtonComprarBibl{
     margin-top: 10%;
 }
 .BtonComprarBibl{
-    padding: 1.4em;
+    /*--padding: 1.4em;
     cursor: pointer;
     background:rgba(245, 244, 244, 0.822);
     border-radius:9%;
+    width: 100%;--*/
+    text-decoration: none;
     width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0.5em 3em;
+    color:#888;
+    font-size: 1.6em;
+    background-color: #262c37;
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 
 .BtonComprarBibl:hover{
-    background: rgba(4, 248, 41, 0.52);
+    background: rgba(117, 145, 121, 0.52);
+    color: black;
+}
+
+
+.BtonComprarBibl span{
+    display: block;
+    position: absolute;
+    background-color: #09ee42;
+}
+
+.BtonComprarBibl span:nth-child(1){
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s;
+}
+
+.BtonComprarBibl:hover span:nth-child(1){
+    transform: scaleY(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+
+.BtonComprarBibl span:nth-child(2){
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    transform: scalex(0);
+    transform-origin:right;
+    transition: transform 0.5s;
+}
+
+.BtonComprarBibl:hover span:nth-child(2){
+    transform: scalex(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.BtonComprarBibl span:nth-child(3){
+    right: 0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    transform: scaley(0);
+    transform-origin:top;
+    transition: transform 0.5s;
+}
+
+.BtonComprarBibl:hover span:nth-child(3){
+    transform: scalex(1);
+    transform-origin: bottom;
+    transition: transform 0.5s;
+}
+
+
+.BtonComprarBibl span:nth-child(4){
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 3px;
+    transform: scalex(0);
+    transform-origin:right;
+    transition: transform 0.5s;
+}
+
+.BtonComprarBibl:hover span:nth-child(4){
+    transform: scalex(1);
+    transform-origin: left;
+    transition: transform 0.5s;
 }
 
 
@@ -225,6 +489,26 @@
     background: rgb(66, 49, 221);
 }
 
+
+.MotorBibl{
+    line-height: 1.8em;
+    font-weight: 600;
+}
+
+
+
+.strong{
+    border-bottom: 2px solid rgb(2, 2, 2);
+    width: 100%;
+}
+
+
+
+@media screen and (max-width:1400px){
+    .XPosicion{
+        margin-bottom: 3%;
+    }
+}
 @media screen and (max-width:1000px) {
     .gridBibloteca{
         display: flex;
@@ -235,13 +519,50 @@
     .ContenedorCaract{
         margin-left: 0;
         margin-top: 5%;
+        
+    }
+
+    .ContenedorForm{
+        width: 65%;
+    }
+
+    .XPosicion{
+        margin-bottom: 7%;
+    }
+
+    .Xbton{
+        padding: 3% 3%;
     }
 }
 
 
-@media screen and (max-width:625px){
+@media screen and (max-width:700px){
     .DivInputsForm{
         display: block;
+    }
+    .ContenedorForm{
+        height: 73%;
+    }
+
+    .DivBtonComprar{
+        margin-bottom: -10%;
+    }
+
+    .Xbton{
+        padding: 5% 5%;
+    }
+}
+
+@media screen and (max-width:480px){
+    .ContenedorForm{
+        height: 63%;
+    }
+    .btonComprar{
+        padding: 0.1em 1em;
+    }
+
+    .Xbton{
+        padding: 7% 7%;
     }
 }
 

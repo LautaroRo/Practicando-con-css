@@ -9,7 +9,8 @@
         "Motor":"2JZ-GTE de seis cilindros en línea y 3.0 litros biturbo.",
         "Km":0,
         "Año":"2002",
-        "PrecioSumado": 60000
+        "PrecioSumado": 60000,
+        "Caballos": "Con 382 caballos de fuerza * y una impresionante torsión de 368 lb-pie, este motor te da mucha potencia y una respuesta instantánea. Info. 2.0 en color Nitro Yellow.Desarrolla una potencia de 330 CV y un par motor de 440 Nm, según se indica en el propio vídeo. Además, puede completar el 0 a 100 km/h en 6,0 segundos y registra una velocidad máxima de 250 km/h."
 
     },
     {
@@ -22,6 +23,7 @@
         "Motor":"V8 de 9 litros de desplazamiento y doble turbocargador de 1,650 hp",
         "Km":0,
         "Año": "1970",
-        "PrecioSumado": 80000
+        "PrecioSumado": 80000,
+        "Caballos": "Ese Charger RT 1970, caracterizado por la toma de aire en el cofre, tenía 900 caballos de fuerza. CON ESA POTENCIA, el padre de Dominic conquistó el cuarto de milla en tan solo 9 segundos."
     }
 ]

@@ -7,6 +7,7 @@ const Main = ({greeting}) => {
         {greeting.map((product)=>{
             return <MainMap Autos={product} key={product.id}></MainMap>
         })}
+
     </div>
 )
 }
