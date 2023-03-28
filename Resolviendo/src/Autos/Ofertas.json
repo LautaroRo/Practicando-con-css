@@ -8,7 +8,7 @@
         "id":3,
         "PrecioSumado": 40000,
         "Ciudad":"Buenos Aires",
-        "Motor":"Sedan 2017 1.5 VTEC Turbo CVT Executive",
+        "Motor":"Sedan 2017 1.5 VTEC Turbo CVT Executive. De serie, cuenta con frenos de disco sobredimensionados, suspensión deportiva con barra de estabilización en el eje trasero, llantas de aleación de 17” realizadas en aluminio, etc. Además tiene control de tracción y estabilidad, frenos de disco en las cuatro ruedas de mayor diámetro que en la versión estándar, asientos de cuero con el signo SI en el interior, doble airbag. ",
         "Km":0,
         "Año":"2012"
     },
@@ -17,7 +17,7 @@
         "Modelo":"Mercedes-Benz Clase C",
         "Precio2": 120000,
         "Precio":80000,
-        "Img":"https://autotest.com.ar/wp-content/uploads/2021/02/MERCEDES-BENZ-CLASE-C-2022.jpg",
+        "Img":"https://www.km77.com/images/medium/4/4/9/7/c-300-e-p.344497.jpg",
         "Descripcion": "El Mercedes-Benz Clase C es un automóvil de gama alta (automóvil de turismo del segmento D) producido por el fabricante alemán Mercedes-Benz desde el año 1993. Es el sucesor del Mercedes-Benz 190.",
         "id":4,
         "PrecioSumado": 80000,
