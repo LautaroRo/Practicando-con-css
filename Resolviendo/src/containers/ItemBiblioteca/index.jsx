@@ -22,6 +22,9 @@ const ItemBiblioteca = () => {
                 <a href="#Biblioteca" className='btonInicioBiblitoeca'>Ver Biblioteca</a>
         </div>
         <ToastContainer/>
+        <div className='divAn'>
+            <h2 className='h1Inicio'>Carrito :</h2>
+        </div>
         {
 
     Autos.length === 0
