@@ -12,7 +12,6 @@ const ItemBiblioteca = () => {
     useEffect(()=>{
         seguirPeliculas()
     },[])
-
     console.log(Autos)
 
     return (
@@ -23,7 +22,7 @@ const ItemBiblioteca = () => {
         </div>
         <ToastContainer/>
         <div className='divAn'>
-            <h2 className='h1Inicio'>Carrito :</h2>
+            <h2 className='h1Inicio'>Carrito</h2>
         </div>
         {
 

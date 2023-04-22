@@ -333,6 +333,10 @@ main{
     margin-top: 10%;
 }
 
+
+.none{
+    position: fixed;
+}
 @media screen and (max-width:1250px){
     .Carousel{
         display: flex;

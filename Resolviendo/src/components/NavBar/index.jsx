@@ -2,8 +2,9 @@ import React, { useContext, useState} from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import "./estilos.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faCableCar, faCartShopping,faX, faTrash} from '@fortawesome/free-solid-svg-icons'
+import {faCartShopping,faX} from '@fortawesome/free-solid-svg-icons'
 import {faWhatsapp} from '@fortawesome/free-brands-svg-icons'
+import { faBars} from "@fortawesome/free-solid-svg-icons"
 import { Shop } from '../../Context/ShopProvider'
 import ItemCart from "../ItemCart"
 
@@ -11,7 +12,7 @@ const NavBar = () => {
 
     const {CountCart , Autos} = useContext(Shop)
     
-
+    const [estado, setEstado] = useState(false)
     const [Close, setClose] = useState(false)
     const [Open, setOpen] = useState(false)
 
@@ -22,34 +23,34 @@ const NavBar = () => {
     }
 
 
-
     const Desactivar = () =>{
         setClose(false)
         setOpen(true)
     }
 return (
+    <>
     <div>
         <header>
             <nav>
                 <input type="checkbox" id="check"/>
                 <label htmlFor="check" className='checkbtn'>
-                    <FontAwesomeIcon icon={faCableCar}></FontAwesomeIcon>
+                    <FontAwesomeIcon className='bar' icon={faBars}></FontAwesomeIcon>
                 </label>
-                <div className='H1NavBar'>
-                    <h1 className='h1'>Tienda</h1>
-                </div>
                 
-                <ul>
+                    <h1 className='h1'>Tienda de autos</h1>
+                
+                
+                <ul className='ulheaderActive'>
                     <li>
-                        <NavLink to="/" className={({isActive}) => isActive ? "activado" : 'Link'}>Inicio</NavLink>
+                        <NavLink to="/" className={({isActive}) => isActive ? "activado" : 'Link'} onClick={() => setEstado(!estado)}>Inicio</NavLink>
                     </li>
 
                     <li>
-                        <NavLink to="/Ofertas" className={({isActive}) => isActive ? "activado" : 'Link'}>Ofertas</NavLink>
+                        <NavLink to="/Ofertas" className={({isActive}) => isActive ? "activado" : 'Link'} onClick={() => setEstado(!estado)}>Ofertas</NavLink>
                     </li>
 
                     <li>
-                        <NavLink to="/Biblioteca" className={({isActive}) => isActive ? "activado" : 'Link'}>Biblioteca</NavLink>
+                        <NavLink to="/Biblioteca" className={({isActive}) => isActive ? "activado" : 'Link'} onClick={() => setEstado(!estado)}>Biblioteca</NavLink>
                     </li>
                 </ul>
             </nav>
@@ -120,9 +121,9 @@ return (
         null
         }
         </div>
-
-
     </div>
+    </>
+
 )
 }
 

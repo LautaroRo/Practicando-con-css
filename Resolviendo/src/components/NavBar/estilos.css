@@ -1,74 +1,158 @@
-nav{
-    position: fixed;
-    height: 3em;
-    width: 100%;
-    
-}
-
-
-.H1NavBar{
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3em;
     position: absolute;
-    padding: 2.4em 2em;
 }
 
-.h1{
-    font-size: 2em;
+header h1{
+    font-size: 2.4em;
+    text-transform: uppercase;
     color: yellow;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+header h1::after{
+    content: "";
+    display: block;
+    width: 100%;
+    border: 1px solid yellow;
 }
 
-nav ul{
-    float: right;
-    margin-right: 5em;
-    background: #494444;
-    border-radius: 2em;
-    margin-top: 1em;
+.bar{
+    height: 30px;
 }
-
-
-nav ul li{
-    display: inline-block;
-    line-height: 5.5em;
-    margin: 0 2em;
-}
-
-
-.activado{
-    background: #000090;
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-    padding: 0.5em 1em;
-    border-radius: 1em;
-    text-transform: uppercase;
-}
-
-.Link{
-    color: white;
-    text-decoration: none;
-    font-size: 1em;
-    padding: 0.5em 1em;
-    border-radius: 1em;
-    text-transform: uppercase;
-}
-
-.Link:hover{
-    background: #000090;
-    transition: .5s;
-}
-
-.checkbtn{
-    font-size: 2em;
-    color: white;
-    float: right;
-    line-height: 3.5em;
-    margin-right: 1em;
-    cursor: pointer;
-    display: none;
-}
-
 #check{
     display: none;
 }
+.checkbtn{
+    display: flex;
+    position: fixed;
+    z-index: 3000;
+    color: white;
+    cursor: pointer;
+    margin: 0 auto;
+    right: 0;
+    padding: 0 2em;
+}
+
+
+nav ul{
+    left: 100%;
+    width: 100%;
+    background-color: rgb(32, 32, 49);
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    transition: all 2s;
+
+}
+nav ul li{
+    display: block;
+    margin: 2.8em 0;
+    line-height: 2em;
+    align-items: center;
+}
+
+.Link{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    transition: all 2s;
+    position: relative;
+}
+
+.activado{
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    transition: all 2s;
+}
+
+.activado::after{
+    content: "";
+    display: block;
+    width: 100%;
+    border: 1px solid white;
+    position: absolute;
+}
+
+
+
+.Link::after{
+    content: "";
+    display: block;
+    width: 100%;
+    border: 1px solid white;
+    position: absolute;
+    transform: scaleX(0);
+    transition: all .5s;
+}
+
+.Link:hover::after{
+    transform: scaleX(1);
+}
+#check:checked  ~  .ulheaderActive{
+    left: 0;
+    width: 100%;
+    background-color: rgb(32, 32, 49);
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    transition: all 2s;
+}
+
+
+
+
+
+
+
+
+#check:checked  ~  .ulheader{
+    left: 100%;
+    width: 100%;
+    background-color: rgb(32, 32, 49);
+    height: 100%;
+    position: fixed;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 1;
+    transition: all 2s;
+}
+
+
+
+
+
+
+
+
+
+
 
 .posicionBotonwsp{
     display: flex;

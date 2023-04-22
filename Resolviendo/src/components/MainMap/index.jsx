@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import "./estilos.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faMoneyBillAlt, faArrowRight} from '@fortawesome/free-solid-svg-icons'
@@ -13,6 +13,7 @@ const MainMap = ({Autos}) => {
     const [open, setOpen] = useState(false)
     const [Cantidad, setCantidad] = useState(1)
     const [Close, setClose] = useState(false)
+    const {info2} = useRef()
 
     const activar = () =>{
         setStateTrue(false)
@@ -22,6 +23,12 @@ const MainMap = ({Autos}) => {
     const Desactivar = () =>{
         setStateTrue(true)
         setOpen(false)
+
+        let {current : caja} = info2
+
+        caja.classList.add("none")
+
+        
     }
 
     
@@ -51,6 +58,7 @@ return (
                 {
                     StateTrue === true
                     ?
+                    
                     <button className='BtonCardMinus' onClick={activar}><FontAwesomeIcon icon={faMinus}></FontAwesomeIcon></button>
                     :
                     <button className='BtonCardPlus' onClick={Desactivar} ><FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></button>
@@ -101,7 +109,7 @@ return (
     }
     {
         open === true ?
-        <div className="MasInfo2" id='MasInfo2'>
+        <div className="MasInfo2" id='MasInfo2' ref={info2}>
             <h2>Informacion Adicional</h2>
             <p>Este auto pose un motor {Autos.Motor} con {Autos.Km} Kilometros de uso y es del año {Autos.Año}. {Autos.Caballos}</p>
         </div>
