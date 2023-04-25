@@ -342,6 +342,20 @@ nav ul li{
 .CarritoH1{
     font-size: 2em;
     margin-bottom: 5%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.CarritoH1::after{
+    content: "";
+    display: inline-block;
+    border: 1px solid black;
+    width: 20%;
+    position: absolute;
+    margin-top: 40px;
 }
 
 
