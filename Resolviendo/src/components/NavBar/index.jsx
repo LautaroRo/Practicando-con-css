@@ -31,13 +31,16 @@ return (
     <>
     <div>
         <header>
+        
             <nav>
                 <input type="checkbox" id="check"/>
                 <label htmlFor="check" className='checkbtn'>
                     <FontAwesomeIcon className='bar' icon={faBars}></FontAwesomeIcon>
                 </label>
-                
-                    <h1 className='h1'>Tienda de autos</h1>
+
+                    
+                <h1 className='h1'>Tienda de autos</h1>
+                    
                 
                 
                 <ul className='ulheaderActive'>
