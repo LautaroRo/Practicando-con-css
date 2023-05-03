@@ -455,7 +455,9 @@ height: 70vh;
         line-height: 2em;
         align-items: center;
     }
-
+    .h1{
+        font-size: 2;
+    }
     .Link{
         font-size: 1em;
     }
