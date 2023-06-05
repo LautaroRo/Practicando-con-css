@@ -24,7 +24,6 @@
 }
 .contenedorAutos .contenedor .tituloAutoPrinc{
     font-weight: 100;
-    flex-direction: row;
     font-size: 3.75em;
 }
 

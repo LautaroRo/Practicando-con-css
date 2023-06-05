@@ -15,7 +15,7 @@ const NavBar = () => {
     const [estado, setEstado] = useState(false)
     const [Close, setClose] = useState(false)
     const [Open, setOpen] = useState(false)
-
+    const [isChecked, setIsChecked] = useState(false);
 
     const Activar = () =>{
         setClose(true)
@@ -27,13 +27,20 @@ const NavBar = () => {
         setClose(false)
         setOpen(true)
     }
+
+    const handleCheckboxClick = () => {
+        setEstado(!estado)
+        setIsChecked(!isChecked);
+
+
+    }
 return (
     <>
     <div>
         <header>
         
             <nav>
-                <input type="checkbox" id="check"/>
+                <input type="checkbox" id="check" checked={isChecked} onChange={handleCheckboxClick}/>
                 <label htmlFor="check" className='checkbtn'>
                     <FontAwesomeIcon className='bar' icon={faBars}></FontAwesomeIcon>
                 </label>
@@ -45,15 +52,15 @@ return (
                 
                 <ul className='ulheaderActive'>
                     <li>
-                        <NavLink to="/" className={({isActive}) => isActive ? "activado" : 'Link'} onClick={() => setEstado(!estado)}>Inicio</NavLink>
+                        <NavLink to="/" className={({isActive}) => isActive ? "activado" : 'Link'} onClick={handleCheckboxClick}>Inicio</NavLink>
                     </li>
 
                     <li>
-                        <NavLink to="/Ofertas" className={({isActive}) => isActive ? "activado" : 'Link'} onClick={() => setEstado(!estado)}>Ofertas</NavLink>
+                        <NavLink to="/Ofertas" className={({isActive}) => isActive ? "activado" : 'Link'} onClick={handleCheckboxClick}>Ofertas</NavLink>
                     </li>
 
                     <li>
-                        <NavLink to="/Biblioteca" className={({isActive}) => isActive ? "activado" : 'Link'} onClick={() => setEstado(!estado)}>Biblioteca</NavLink>
+                        <NavLink to="/Biblioteca" className={({isActive}) => isActive ? "activado" : 'Link'} onClick={handleCheckboxClick}>Biblioteca</NavLink>
                     </li>
                 </ul>
             </nav>
